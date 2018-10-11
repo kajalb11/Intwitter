@@ -14,5 +14,7 @@ public class TweetRequest {
 	private String userName;
 	
 	private String tweetMessage;
+	
+	
 
 }

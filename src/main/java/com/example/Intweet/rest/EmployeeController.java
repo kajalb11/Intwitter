@@ -29,6 +29,7 @@ public class EmployeeController {
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> saveEmployee(@RequestBody Employee employee){
 		logger.info("--inside employee controller --");
+		logger.debug("testing debug");
 		empService.saveEmployee(employee);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
