@@ -85,9 +85,9 @@ public class FollowingServiceImpl implements FollowingService
 	}
 
 	@Override
-	public List<String> getMyFollowings(String curentIntweeterName) 
+	public List<String> getMyFollowings(String currentIntweeterName) 
 	{
-		Long loggedInUserEmployeeId = empRepo.findByIntweeterName(curentIntweeterName).getEmployeeId();
+		Long loggedInUserEmployeeId = empRepo.findByIntweeterName(currentIntweeterName).getEmployeeId();
 		List<Following> followingList = followingRepo.findByEmployeeId(loggedInUserEmployeeId);
 		List<String> followingUserList = new ArrayList<>();
 		for (Following following : followingList) {

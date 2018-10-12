@@ -50,11 +50,12 @@ public class FollowingController
 	}
 	
 	@RequestMapping(value = "/getMyFollowings")
-	@GetMapping(value="/{curentIntweeterName}",consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> getMyFollowings(@PathVariable String curentIntweeterName )
+	@GetMapping(value="/{currentIntweeterName}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> getMyFollowings(@PathVariable String currentIntweeterName )
 	{
-		logger.info("inside getMyFollowings");
-		return new ResponseEntity<>(followingService.getMyFollowings(curentIntweeterName),HttpStatus.OK);
+		logger.info("Inside FollowingController: getMyFollowings");
+		followingService.getMyFollowings(currentIntweeterName);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 	@RequestMapping(value = "/getAllFollowings")
