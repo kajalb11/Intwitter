@@ -1,4 +1,4 @@
-package com.example.Intweet.entity;
+package com.example.Intwitter.entity;
 
 import java.io.Serializable;
 

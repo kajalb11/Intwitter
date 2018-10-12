@@ -1,4 +1,4 @@
-package com.example.Intweet.entity;
+package com.example.Intwitter.entity;
 
 import java.io.Serializable;
 
@@ -33,10 +33,7 @@ public class Employee implements Serializable{
 	
 	@Column(name="last_name")
 	private String lastName;
-	
-	@Column(name="email_id")
-	private String emailId;
-	
-	@Column(name="handler_name", unique=true)
+		
+	@Column(name="intweeter_name", unique=true)
 	private String intweeterName;
 }

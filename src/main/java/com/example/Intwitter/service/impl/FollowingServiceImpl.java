@@ -1,4 +1,4 @@
-package com.example.Intweet.service.impl;
+package com.example.Intwitter.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +10,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.Intweet.entity.Employee;
-import com.example.Intweet.entity.Following;
-import com.example.Intweet.entity.FollowingId;
-import com.example.Intweet.model.FollowingRequest;
-import com.example.Intweet.repository.EmployeeRepository;
-import com.example.Intweet.repository.FollowingRepository;
-import com.example.Intweet.service.FollowingService;
+import com.example.Intwitter.entity.Employee;
+import com.example.Intwitter.entity.Following;
+import com.example.Intwitter.entity.FollowingId;
+import com.example.Intwitter.model.FollowingRequest;
+import com.example.Intwitter.repository.EmployeeRepository;
+import com.example.Intwitter.repository.FollowingRepository;
+import com.example.Intwitter.service.FollowingService;
 
 
 @Service
@@ -31,20 +31,31 @@ public class FollowingServiceImpl implements FollowingService {
 	
 	@Override
 	@Transactional
-	public void addFollowers(FollowingRequest req) {
+	public void follow(FollowingRequest req) {
 		
-		String userHandleName = req.getIntweeterName();
-		Employee currentUserDeatils = empRepo.findByIntweeterName(userHandleName);
-		logger.info("employee id of current user {}" ,currentUserDeatils.getEmployeeId() );
-		List<Employee>	followingEmployeeList = empRepo.findByIntweeterNameIn(req.getFollowersIntweeterName());
+		String intweeterName = req.getIntweeterName();
+		Employee currentUserDetails = empRepo.findByIntweeterName(intweeterName);
+		long loggedInUserEmployeeId = currentUserDetails.getEmployeeId();
+		logger.info("employee id of current logged in user {}", loggedInUserEmployeeId);
+
+		String followingIntweeterName = req.getFollowingIntweeterName();
+		Employee followingUserDetails = empRepo.findByIntweeterName(followingIntweeterName);
+		long followingUserEmployeeId = followingUserDetails.getEmployeeId();
+		logger.info("employee id of following user {}", followingUserEmployeeId);
+		
+		List<Employee>	followingEmployeeList = empRepo.findByIntweeterNameIn(req.getFollowingIntweeterName());
 		logger.info("size of following list {}",followingEmployeeList.size());
 		List<Following> followingList = new ArrayList<>();	
 		for (Employee employee : followingEmployeeList) {
 			logger.info("follower id {} " , employee.getEmployeeId());
-			followingList.add(Following.builder().employeeId(currentUserDeatils.getEmployeeId()).followingEmployeeId(employee.getEmployeeId()).build());
+			followingList.add(Following.builder().employeeId(currentUserDetails.getEmployeeId()).followingEmployeeId(employee.getEmployeeId()).build());
 		}
 		
-		follwoingRepo.saveAll(followingList);
+		Following following;
+		following.setEmployeeId(loggedInUserEmployeeId);
+		following.setFollowingEmployeeId(followingUserEmployeeId);
+		
+		follwoingRepo.save(following);
 	}
 
 	@Override

@@ -1,6 +1,6 @@
-package com.example.Intweet.service;
+package com.example.Intwitter.service;
 
-import com.example.Intweet.entity.Employee;
+import com.example.Intwitter.entity.Employee;
 
 public interface EmployeeService {
 

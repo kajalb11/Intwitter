@@ -1,4 +1,4 @@
-package com.example.Intweet.model;
+package com.example.Intwitter.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,11 +9,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TweetRequest {
+public class IntweetRequest {
 	
-	private String userName;
+	private String intweeterName;
 	
-	private String tweetMessage;
+	private String intweetMessage;
 	
 	
 

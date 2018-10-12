@@ -1,4 +1,4 @@
-package com.example.Intweet.entity;
+package com.example.Intwitter.entity;
 
 import java.util.Date;
 
@@ -28,7 +28,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class InTweet {
+public class Intweet {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,10 +44,6 @@ public class InTweet {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "intweet_time", nullable = false)
 	private Date intweetTime;
-	
-	@Column(name="email_id")
-	private String emailId;
-	
 	
 	@PrePersist
 	public void prePersist() {

@@ -1,15 +1,15 @@
-package com.example.Intweet.service.impl;
+package com.example.Intwitter.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.Intweet.entity.Employee;
-import com.example.Intweet.repository.EmployeeRepository;
-import com.example.Intweet.service.EmployeeService;
+import com.example.Intwitter.entity.Employee;
+import com.example.Intwitter.repository.EmployeeRepository;
+import com.example.Intwitter.service.EmployeeService;
 
 
 @Service
-public class EmployeeImpl implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Autowired
 	EmployeeRepository empRepo;

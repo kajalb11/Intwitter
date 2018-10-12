@@ -1,4 +1,4 @@
-package com.example.Intweet.model;
+package com.example.Intwitter.model;
 
 import java.util.List;
 
@@ -12,6 +12,6 @@ public class FollowingRequest {
 	
 	private String intweeterName;
 	
-	private List<String> followersIntweeterName;
+	private String followingIntweeterName;
 
 }
