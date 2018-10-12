@@ -32,25 +32,30 @@ public class FollowingController {
 	
 	@RequestMapping(value = "/follow")
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> follow(@RequestBody FollowingRequest followIntweeterName){
-		followingService.follow(followIntweeterName);
+	public ResponseEntity<?> follow(@RequestBody FollowingRequest followReq){
+		followingService.follow(followReq);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 	
-	@DeleteMapping(value="/{curentIntweeterName}/{followingIntweeterName}", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> removeFollowers(@PathVariable String curentIntweeterName, @PathVariable String followingIntweeterName){
-		
-		followingService.removeFollowers(curentIntweeterName, followingIntweeterName);
+	
+	//@DeleteMapping(value="/{curentIntweeterName}/{followingIntweeterName}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	//public ResponseEntity<?> removeFollowers(@PathVariable String curentIntweeterName, @PathVariable String followingIntweeterName)
+	@RequestMapping(value = "/unfollow")
+	@DeleteMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> unfollow(@RequestBody FollowingRequest unfollowReq)
+	{
+		followingService.unfollow(unfollowReq);
 		return new ResponseEntity<>(HttpStatus.ACCEPTED);
 	}
 	
+	@RequestMapping(value = "/getMyFollowers")
 	@GetMapping(value="/{curentIntweeterName}",consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> getFollowers(@PathVariable String curentIntweeterName ){
 		logger.info("inside get Followers method");
 		return new ResponseEntity<>(followingService.getFollowers(curentIntweeterName),HttpStatus.OK);
 	}
 	
-	
+	@RequestMapping(value = "/getAllFollowing")
 	@GetMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> findAll(){
 		logger.info("inside find  All ");

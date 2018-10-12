@@ -35,34 +35,51 @@ public class FollowingServiceImpl implements FollowingService {
 		
 		String intweeterName = req.getIntweeterName();
 		Employee currentUserDetails = empRepo.findByIntweeterName(intweeterName);
-		long loggedInUserEmployeeId = currentUserDetails.getEmployeeId();
+		Long loggedInUserEmployeeId = currentUserDetails.getEmployeeId();
 		logger.info("employee id of current logged in user {}", loggedInUserEmployeeId);
 
 		String followingIntweeterName = req.getFollowingIntweeterName();
 		Employee followingUserDetails = empRepo.findByIntweeterName(followingIntweeterName);
-		long followingUserEmployeeId = followingUserDetails.getEmployeeId();
+		Long followingUserEmployeeId = followingUserDetails.getEmployeeId();
 		logger.info("employee id of following user {}", followingUserEmployeeId);
 		
-		List<Employee>	followingEmployeeList = empRepo.findByIntweeterNameIn(req.getFollowingIntweeterName());
+		Following following = new Following();
+		following.setEmployeeId(loggedInUserEmployeeId);
+		following.setFollowingEmployeeId(followingUserEmployeeId);
+		
+		follwoingRepo.save(following);
+		
+		/* 
+		 List<Employee>	followingEmployeeList = empRepo.findByIntweeterNameIn(req.getFollowingIntweeterName());
 		logger.info("size of following list {}",followingEmployeeList.size());
 		List<Following> followingList = new ArrayList<>();	
 		for (Employee employee : followingEmployeeList) {
 			logger.info("follower id {} " , employee.getEmployeeId());
 			followingList.add(Following.builder().employeeId(currentUserDetails.getEmployeeId()).followingEmployeeId(employee.getEmployeeId()).build());
 		}
-		
-		Following following;
-		following.setEmployeeId(loggedInUserEmployeeId);
-		following.setFollowingEmployeeId(followingUserEmployeeId);
-		
-		follwoingRepo.save(following);
+		 */
 	}
 
 	@Override
-	public void removeFollowers(String userHandler, String removerHandlerName) {
-		Long currentUserID = empRepo.findByIntweeterName(userHandler).getEmployeeId();
-		Long removingHandlerId = empRepo.findByIntweeterName(removerHandlerName).getEmployeeId();
-		follwoingRepo.deleteById(FollowingId.builder().employeeId(currentUserID).followingEmployeeId(removingHandlerId).build());
+	public void unfollow(FollowingRequest req) 
+	{
+		String intweeterName = req.getIntweeterName();
+		Employee currentUserDetails = empRepo.findByIntweeterName(intweeterName);
+		Long loggedInUserEmployeeId = currentUserDetails.getEmployeeId();
+		logger.info("employee id of current logged in user {}", loggedInUserEmployeeId);
+
+		String followingIntweeterName = req.getFollowingIntweeterName();
+		Employee followingUserDetails = empRepo.findByIntweeterName(followingIntweeterName);
+		Long followingUserEmployeeId = followingUserDetails.getEmployeeId();
+		logger.info("employee id of following user {}", followingUserEmployeeId);
+		
+		Following following = new Following();
+		following.setEmployeeId(loggedInUserEmployeeId);
+		following.setFollowingEmployeeId(followingUserEmployeeId);
+		
+		//Long currentUserID = empRepo.findByIntweeterName(userHandler).getEmployeeId();
+		//Long removingHandlerId = empRepo.findByIntweeterName(removerHandlerName).getEmployeeId();
+		follwoingRepo.deleteById(FollowingId.builder().employeeId(loggedInUserEmployeeId).followingEmployeeId(followingUserEmployeeId).build());
 	}
 
 	@Override

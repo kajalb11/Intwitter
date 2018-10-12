@@ -7,9 +7,9 @@ import com.example.Intwitter.model.FollowingRequest;
 public interface FollowingService {
 
 	
-	public void follow(String followingIntweeterName);
+	public void follow(FollowingRequest followReq);
 	
-	public void unfollow(String intweeterName, String followingIntweeterName);
+	public void unfollow(FollowingRequest unfollowReq);
 	
 	public List<String> getFollowers(String intweeterName);
 }
