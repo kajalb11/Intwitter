@@ -12,10 +12,12 @@ import com.example.Intwitter.model.IntweetRequest;
 
 @RestController
 @RequestMapping(value="/intweet")
-public class IntweetController {
+public class IntweetController 
+{
 
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	private ResponseEntity<?> postTweet(@RequestBody IntweetRequest tweetRequest){
+	private ResponseEntity<?> postTweet(@RequestBody IntweetRequest tweetRequest)
+	{
 		
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}

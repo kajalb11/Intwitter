@@ -20,10 +20,11 @@ import com.example.Intwitter.service.FollowingService;
 
 
 @Service
-public class FollowingServiceImpl implements FollowingService {
+public class FollowingServiceImpl implements FollowingService 
+{
 	Logger logger = LoggerFactory.getLogger(FollowingServiceImpl.class);
 	@Autowired
-	FollowingRepository follwoingRepo;
+	FollowingRepository followingRepo;
 	
 	@Autowired
 	EmployeeRepository empRepo;
@@ -31,7 +32,8 @@ public class FollowingServiceImpl implements FollowingService {
 	
 	@Override
 	@Transactional
-	public void follow(FollowingRequest req) {
+	public void follow(FollowingRequest req) 
+	{
 		
 		String intweeterName = req.getIntweeterName();
 		Employee currentUserDetails = empRepo.findByIntweeterName(intweeterName);
@@ -47,7 +49,7 @@ public class FollowingServiceImpl implements FollowingService {
 		following.setEmployeeId(loggedInUserEmployeeId);
 		following.setFollowingEmployeeId(followingUserEmployeeId);
 		
-		follwoingRepo.save(following);
+		followingRepo.save(following);
 		
 		/* 
 		 List<Employee>	followingEmployeeList = empRepo.findByIntweeterNameIn(req.getFollowingIntweeterName());
@@ -79,15 +81,16 @@ public class FollowingServiceImpl implements FollowingService {
 		
 		//Long currentUserID = empRepo.findByIntweeterName(userHandler).getEmployeeId();
 		//Long removingHandlerId = empRepo.findByIntweeterName(removerHandlerName).getEmployeeId();
-		follwoingRepo.deleteById(FollowingId.builder().employeeId(loggedInUserEmployeeId).followingEmployeeId(followingUserEmployeeId).build());
+		followingRepo.deleteById(FollowingId.builder().employeeId(loggedInUserEmployeeId).followingEmployeeId(followingUserEmployeeId).build());
 	}
 
 	@Override
-	public List<String> getFollowers(String userHandler) {
-		Long currentUserId = empRepo.findByIntweeterName(userHandler).getEmployeeId();
-		List<Following> follwingList = follwoingRepo.findByEmployeeId(currentUserId);
+	public List<String> getMyFollowings(String curentIntweeterName) 
+	{
+		Long loggedInUserEmployeeId = empRepo.findByIntweeterName(curentIntweeterName).getEmployeeId();
+		List<Following> followingList = followingRepo.findByEmployeeId(loggedInUserEmployeeId);
 		List<String> followingUserList = new ArrayList<>();
-		for (Following following : follwingList) {
+		for (Following following : followingList) {
 			String userName = empRepo.findById(following.getEmployeeId()).get().getIntweeterName();
 			followingUserList.add(userName);
 		}

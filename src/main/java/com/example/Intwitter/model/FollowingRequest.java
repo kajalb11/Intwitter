@@ -8,7 +8,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class FollowingRequest {
+public class FollowingRequest 
+{
 	
 	private String intweeterName;
 	

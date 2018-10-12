@@ -17,8 +17,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Employee implements Serializable{
-	
+public class Employee implements Serializable
+{	
 	/**
 	 * 
 	 */

@@ -21,7 +21,8 @@ import com.example.Intwitter.service.FollowingService;
 
 @RestController
 //@RequestMapping(value = "/following")
-public class FollowingController {
+public class FollowingController 
+{
 	Logger logger = LoggerFactory.getLogger(FollowingController.class);
 	
 	@Autowired
@@ -32,7 +33,8 @@ public class FollowingController {
 	
 	@RequestMapping(value = "/follow")
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> follow(@RequestBody FollowingRequest followReq){
+	public ResponseEntity<?> follow(@RequestBody FollowingRequest followReq)
+	{
 		followingService.follow(followReq);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
@@ -48,17 +50,19 @@ public class FollowingController {
 		return new ResponseEntity<>(HttpStatus.ACCEPTED);
 	}
 	
-	@RequestMapping(value = "/getMyFollowers")
-	@GetMapping(value="/{curentIntweeterName}",consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> getFollowers(@PathVariable String curentIntweeterName ){
-		logger.info("inside get Followers method");
-		return new ResponseEntity<>(followingService.getFollowers(curentIntweeterName),HttpStatus.OK);
+	@RequestMapping(value = "/getMyFollowings")
+	@GetMapping(value="/{curentIntweeterName}",consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> getMyFollowings(@PathVariable String curentIntweeterName )
+	{
+		logger.info("inside getMyFollowings");
+		return new ResponseEntity<>(followingService.getMyFollowings(curentIntweeterName),HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/getAllFollowing")
+	@RequestMapping(value = "/getAllFollowings")
 	@GetMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> findAll(){
-		logger.info("inside find  All ");
+	public ResponseEntity<?> getAllFollowings()
+	{
+		logger.info("inside getAllFollowings ");
 		return ResponseEntity.ok(followingRepo.findAll());
 	}
 	

@@ -16,7 +16,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 @EqualsAndHashCode
-public class FollowingId implements Serializable {
+public class FollowingId implements Serializable 
+{
 
 	/**
 	 * 

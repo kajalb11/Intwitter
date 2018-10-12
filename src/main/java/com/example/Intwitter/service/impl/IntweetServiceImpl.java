@@ -11,7 +11,8 @@ import com.example.Intwitter.repository.IntweetRepository;
 import com.example.Intwitter.service.IntweetService;
 
 @Service
-public class IntweetServiceImpl implements IntweetService {
+public class IntweetServiceImpl implements IntweetService 
+{
 
 	@Autowired
 	IntweetRepository intweetRepo;
@@ -21,7 +22,8 @@ public class IntweetServiceImpl implements IntweetService {
 	
 	
 	@Override
-	public void saveIntweet(IntweetRequest intweetRequest) {
+	public void saveIntweet(IntweetRequest intweetRequest) 
+	{
 		Employee emp = empRepo.findByIntweeterName(intweetRequest.getIntweeterName());
 		intweetRepo.save(Intweet.builder().employeeId(emp.getEmployeeId()).intweetMessage(intweetRequest.getIntweetMessage()).build());
 	}

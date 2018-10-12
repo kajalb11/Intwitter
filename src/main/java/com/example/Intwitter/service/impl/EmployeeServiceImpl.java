@@ -9,19 +9,22 @@ import com.example.Intwitter.service.EmployeeService;
 
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService 
+{
 	
 	@Autowired
 	EmployeeRepository empRepo;
 
 	@Override
-	public void saveEmployee(Employee employee) {
+	public void saveEmployee(Employee employee) 
+	{
 		empRepo.save(employee);
 		
 	}
 
 	@Override
-	public Employee getEmployeeById(Long employeeId) {
+	public Employee getEmployeeById(Long employeeId) 
+	{
 		return empRepo.getOne(employeeId);
 	}
 

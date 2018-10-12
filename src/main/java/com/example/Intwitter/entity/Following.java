@@ -23,7 +23,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @IdClass(value=FollowingId.class)
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Following {
+public class Following 
+{
 	
 	@Id
 	@Column(name="employee_id")

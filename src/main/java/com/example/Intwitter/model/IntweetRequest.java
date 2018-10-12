@@ -9,12 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class IntweetRequest {
-	
+public class IntweetRequest 
+{	
 	private String intweeterName;
 	
 	private String intweetMessage;
-	
-	
 
 }

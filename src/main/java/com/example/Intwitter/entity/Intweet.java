@@ -28,7 +28,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Intweet {
+public class Intweet 
+{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
