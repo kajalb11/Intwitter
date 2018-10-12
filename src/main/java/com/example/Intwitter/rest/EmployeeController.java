@@ -31,7 +31,6 @@ public class EmployeeController
 	public ResponseEntity<?> saveEmployee(@RequestBody Employee employee)
 	{
 		logger.info("--inside employee controller --");
-		logger.debug("testing debug");
 		empService.saveEmployee(employee);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}

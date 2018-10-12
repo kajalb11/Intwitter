@@ -1,5 +1,8 @@
 package com.example.Intwitter.service.impl;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +17,8 @@ import com.example.Intwitter.service.IntweetService;
 public class IntweetServiceImpl implements IntweetService 
 {
 
+	Logger logger = LoggerFactory.getLogger(FollowingServiceImpl.class);
+	
 	@Autowired
 	IntweetRepository intweetRepo;
 	
@@ -21,11 +26,19 @@ public class IntweetServiceImpl implements IntweetService
 	EmployeeRepository empRepo;
 	
 	
-	@Override
-	public void saveIntweet(IntweetRequest intweetRequest) 
+	@Override 
+	public void postIntweet(IntweetRequest intweetRequest) 
 	{
-		Employee emp = empRepo.findByIntweeterName(intweetRequest.getIntweeterName());
-		intweetRepo.save(Intweet.builder().employeeId(emp.getEmployeeId()).intweetMessage(intweetRequest.getIntweetMessage()).build());
+		String loggedInUserName = intweetRequest.getIntweeterName();
+		logger.info("current logged in user name {}", loggedInUserName);
+		String intweetMessage = intweetRequest.getIntweetMessage();
+		logger.info("current logged in user name {}", intweetMessage);
+		
+		Employee emp = empRepo.findByIntweeterName(loggedInUserName);
+		Long loggedInUsedEmpId = emp.getEmployeeId();
+		logger.info("current logged in user emp Id {}", loggedInUsedEmpId);
+		
+		intweetRepo.save(Intweet.builder().employeeId(loggedInUsedEmpId).intweetMessage(intweetMessage).build());
 	}
 
 }

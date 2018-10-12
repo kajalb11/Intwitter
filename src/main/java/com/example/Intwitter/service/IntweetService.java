@@ -5,6 +5,6 @@ import com.example.Intwitter.model.IntweetRequest;
 public interface IntweetService 
 {
 	
-	public void saveIntweet(IntweetRequest intweetRequest);
+	public void postIntweet(IntweetRequest intweetRequest);
 
 }
