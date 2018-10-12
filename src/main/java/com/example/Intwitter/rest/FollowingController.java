@@ -53,8 +53,7 @@ public class FollowingController
 	public ResponseEntity<?> getMyFollowings(@PathVariable String currentIntweeterName )
 	{
 		logger.info("Inside FollowingController: getMyFollowings");
-		followingService.getMyFollowings(currentIntweeterName);
-		return new ResponseEntity<>(HttpStatus.OK);
+		return new ResponseEntity<>(followingService.getMyFollowings(currentIntweeterName),HttpStatus.OK);
 	}
 	
 	@RequestMapping(value = "/getAllFollowings")
