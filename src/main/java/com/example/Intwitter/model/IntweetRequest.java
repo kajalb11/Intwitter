@@ -1,14 +1,14 @@
 package com.example.Intwitter.model;
 
-import lombok.AllArgsConstructor;
+//import lombok.AllArgsConstructor;
+//import lombok.NoArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class IntweetRequest 
 {	
 	private String intweeterName;

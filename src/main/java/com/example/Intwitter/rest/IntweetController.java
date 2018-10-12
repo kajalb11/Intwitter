@@ -23,7 +23,7 @@ public class IntweetController
 
 Logger logger = LoggerFactory.getLogger(FollowingController.class);
 	
-	//@Autowired
+	@Autowired
 	IntweetService intweetService;
 	
 	@Autowired
