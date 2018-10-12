@@ -49,8 +49,7 @@ public class FollowingController
 		return new ResponseEntity<>(HttpStatus.ACCEPTED);
 	}
 	
-	@RequestMapping(value = "/getMyFollowings")
-	@GetMapping(value="/{currentIntweeterName}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value="/getMyFollowings/{currentIntweeterName}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> getMyFollowings(@PathVariable String currentIntweeterName )
 	{
 		logger.info("Inside FollowingController: getMyFollowings");
