@@ -97,4 +97,18 @@ public class FollowingServiceImpl implements FollowingService
 		return followingUserList;
 	}
 
+	@Override
+	public List<String> getMyFollowers(String currentIntweeterName) 
+	{
+		Long loggedInUserEmployeeId = empRepo.findByIntweeterName(currentIntweeterName).getEmployeeId();
+		
+		List<Following> followerList = followingRepo.findByFollowingEmployeeId(loggedInUserEmployeeId);
+		List<String> followerUserList = new ArrayList<>();
+		for (Following following : followerList) {
+			String userName = empRepo.findById(following.getEmployeeId()).get().getIntweeterName();
+			followerUserList.add(userName);
+		}
+		return followerUserList;
+	}
+
 }

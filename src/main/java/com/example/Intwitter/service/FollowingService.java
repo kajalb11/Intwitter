@@ -13,4 +13,6 @@ public interface FollowingService
 	
 	public List<String> getMyFollowings(String intweeterName);
 	
+	public List<String> getMyFollowers(String intweeterName);
+	
 }

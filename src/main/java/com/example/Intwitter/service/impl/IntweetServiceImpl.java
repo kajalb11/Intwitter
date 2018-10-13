@@ -31,12 +31,21 @@ public class IntweetServiceImpl implements IntweetService
 	{
 		String loggedInUserName = intweetRequest.getIntweeterName();
 		logger.info("current logged in user name {}", loggedInUserName);
-		String intweetMessage = intweetRequest.getIntweetMessage();
-		logger.info("current logged in user name {}", intweetMessage);
+		
+		String intweetMessage = intweetRequest.getIntweetMessage().trim();
+		logger.info("intweet message {}", intweetMessage);
+		
+		int intweetMessageLength = intweetMessage.length();
+		logger.info("intweet message length {}", intweetMessageLength);
 		
 		Employee emp = empRepo.findByIntweeterName(loggedInUserName);
 		Long loggedInUsedEmpId = emp.getEmployeeId();
 		logger.info("current logged in user emp Id {}", loggedInUsedEmpId);
+		
+		if(intweetMessageLength > 20) // Max length in Twitter is 280
+		{
+			logger.info("intweet message length {} > 20", intweetMessageLength);
+		}
 		
 		intweetRepo.save(Intweet.builder().employeeId(loggedInUsedEmpId).intweetMessage(intweetMessage).build());
 	}
