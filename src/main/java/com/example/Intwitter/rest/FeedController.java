@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.Intwitter.repository.IntweetRepository;
@@ -25,9 +26,10 @@ public class FeedController
 	IntweetRepository intweetRepo;
 	
 	@GetMapping(value="/feed/{currentIntweeterName}", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> getFeed(@PathVariable String currentIntweeterName)
+	public ResponseEntity<?> getFeed(@PathVariable String currentIntweeterName,@RequestParam(value = "page", defaultValue = "0") int page,
+            @RequestParam(value = "limit", defaultValue = "30") int limit)
 	{
 		logger.info("Inside FeedController : getFeed for user {}", currentIntweeterName);
-		return new ResponseEntity<>(feedService.getFeed(currentIntweeterName),HttpStatus.OK);	
+		return new ResponseEntity<>(feedService.getFeed(currentIntweeterName , page,limit),HttpStatus.OK);	
 	}
 }

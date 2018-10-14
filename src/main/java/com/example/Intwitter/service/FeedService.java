@@ -7,5 +7,5 @@ import com.example.Intwitter.model.FeedResponse;
 
 public interface FeedService 
 {
-	public List<FeedResponse> getFeed(String currentIntweeterName);
+	public List<FeedResponse> getFeed(String currentIntweeterName, int page ,int limit);
 }

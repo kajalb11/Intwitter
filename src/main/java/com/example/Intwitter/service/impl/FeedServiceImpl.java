@@ -6,6 +6,8 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.example.Intwitter.entity.Following;
@@ -30,7 +32,7 @@ public class FeedServiceImpl implements FeedService
 	@Autowired
 	FollowingRepository followingRepo;
 	
-	public List<FeedResponse> getFeed(String currentIntweeterName) 
+	public List<FeedResponse> getFeed(String currentIntweeterName , int page ,int  limit) 
 	{
 		logger.info("***** Inside FeedServiceImpl : getFeed *****");
 		logger.info(" Logged In Intweeter Name : {} "+currentIntweeterName);
@@ -56,7 +58,8 @@ public class FeedServiceImpl implements FeedService
 		
 		//Start: Get Intweets posted by Logged in user's Followings
 		logger.info(" Before  findByEmployeeIdInOrderByIntweetTimeDesc  ");
-		intweets = intweetRepo.findByEmployeeIdInOrderByIntweetTimeDesc(followingEmpIdList);		
+		Pageable pageableRequest = PageRequest.of(page, limit);
+		intweets = intweetRepo.findByEmployeeIdInOrderByIntweetTimeDesc(followingEmpIdList,pageableRequest);		
 		logger.info(" After  findByEmployeeIdInOrderByIntweetTimeDesc  ");
 		//End: Get Intweets posted by Logged in user's Followings
 		
