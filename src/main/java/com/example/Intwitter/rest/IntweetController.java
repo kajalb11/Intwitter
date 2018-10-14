@@ -8,7 +8,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,10 +30,13 @@ Logger logger = LoggerFactory.getLogger(FollowingController.class);
 	
 	@RequestMapping(value="/intweet")
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> postIntweet(@RequestBody IntweetRequest intweetRequest)
+	public ResponseEntity<?> postIntweet(@RequestBody IntweetRequest intweetRequest) 
 	{
 		logger.info("inside post intweet ");
 		intweetService.postIntweet(intweetRequest);
+		if(intweetRequest.getIntweetMessage().length() >280) {
+			return new ResponseEntity<>("Max message size is 280",HttpStatus.BAD_REQUEST);
+		}
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 	

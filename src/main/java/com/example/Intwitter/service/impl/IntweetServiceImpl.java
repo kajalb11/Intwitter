@@ -42,11 +42,6 @@ public class IntweetServiceImpl implements IntweetService
 		Long loggedInUsedEmpId = emp.getEmployeeId();
 		logger.info("current logged in user emp Id {}", loggedInUsedEmpId);
 		
-		if(intweetMessageLength > 20) // Max length in Twitter is 280
-		{
-			logger.info("intweet message length {} > 20", intweetMessageLength);
-		}
-		
 		intweetRepo.save(Intweet.builder().employeeId(loggedInUsedEmpId).intweetMessage(intweetMessage).build());
 	}
 

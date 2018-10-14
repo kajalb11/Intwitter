@@ -30,9 +30,6 @@ public class FeedServiceImpl implements FeedService
 	@Autowired
 	FollowingRepository followingRepo;
 	
-	//@Autowired
-	//FeedResponse feedResponse;
-		
 	public List<FeedResponse> getFeed(String currentIntweeterName) 
 	{
 		logger.info("***** Inside FeedServiceImpl : getFeed *****");
@@ -67,11 +64,7 @@ public class FeedServiceImpl implements FeedService
 		for(Intweet intweet : intweets)
 		{	
 			String userName = empRepo.findById(intweet.getEmployeeId()).get().getIntweeterName();
-			FeedResponse feedResponse = new FeedResponse();
-			feedResponse.setIntweeterName(userName);
-			feedResponse.setIntweetMessage(intweet.getIntweetMessage());
-			feedResponse.setIntweetTime(intweet.getIntweetTime());
-			feedResponseList.add(feedResponse);
+			feedResponseList.add(FeedResponse.builder().intweeterName(userName).intweetMessage(intweet.getIntweetMessage()).intweetTime(intweet.getIntweetTime()).build());
 		}		
 		// End: Prepare getFeed Response
 		
