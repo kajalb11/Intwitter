@@ -53,6 +53,7 @@ public class FeedServiceImpl implements FeedService
 			logger.info(" {} : "+followingEmpId);
 			followingEmpIdList.add(followingEmpId);
 		}
+		followingEmpIdList.add(loggedInUserEmployeeId); // Add logged in user as well as user see's self tweets posted as well
 		logger.info(" End followingEmpIdList : ");
 		// End: Get My followings Emp Id list
 		
