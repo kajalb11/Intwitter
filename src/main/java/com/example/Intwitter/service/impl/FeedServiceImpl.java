@@ -14,60 +14,67 @@ import com.example.Intwitter.model.FeedResponse;
 import com.example.Intwitter.repository.EmployeeRepository;
 import com.example.Intwitter.repository.FollowingRepository;
 import com.example.Intwitter.repository.IntweetRepository;
+import com.example.Intwitter.service.FeedService;
 
 @Service
-public class FeedServiceImpl 
+public class FeedServiceImpl implements FeedService
 {
 	Logger logger = LoggerFactory.getLogger(FeedServiceImpl.class);
 	
-	//@Autowired
-	//IntweetRepository intweetRepo;
+	@Autowired
+	IntweetRepository intweetRepo;
+	
+	@Autowired
+	EmployeeRepository empRepo;
+	
+	@Autowired
+	FollowingRepository followingRepo;
 	
 	//@Autowired
-	//EmployeeRepository empRepo;
-	
-	//@Autowired
-	//FollowingRepository followingRepo;
-	
-	//@Autowired
-	//private FollowingServiceImpl followingServiceImpl;
-	
-	public List<Intweet> getFeed(String currentIntweeterName) 
+	//FeedResponse feedResponse;
+		
+	public List<FeedResponse> getFeed(String currentIntweeterName) 
 	{
-		logger.info("Inside FeedServiceImpl : getFeed : {} "+currentIntweeterName);
+		logger.info("***** Inside FeedServiceImpl : getFeed *****");
+		logger.info(" Logged In Intweeter Name : {} "+currentIntweeterName);
 		List<Intweet> intweets = new ArrayList<>();
-		//List<FeedResponse> feedResponse = new ArrayList<>();
-		//Long loggedInUserEmployeeId = empRepo.findByIntweeterName(currentIntweeterName).getEmployeeId();
+
+		List<FeedResponse> feedResponse = new ArrayList<>();
+		Long loggedInUserEmployeeId = empRepo.findByIntweeterName(currentIntweeterName).getEmployeeId();
+		logger.info(" Logged In Intweeter Emp Id : {} "+loggedInUserEmployeeId);
 	
 		// Start Get My Followings - list of users followed by currentIntweeter
-	/*
 		List<Following> followingList = followingRepo.findByEmployeeId(loggedInUserEmployeeId);
 		List<Long> followingEmpIdList = new ArrayList<>();
+		logger.info(" Start followingEmpIdList : ");
 		for (Following following : followingList) 
 		{
-			long followingEmpId = following.getFollowingEmployeeId();
+			Long followingEmpId = following.getFollowingEmployeeId();
+			logger.info(" {} : "+followingEmpId);
 			followingEmpIdList.add(followingEmpId);
 		}
-	*/
+		logger.info(" End followingEmpIdList : ");
 		// End: Get My followings Emp Id list
 		
 		//Start: Get Intweets posted by Logged in user's Followings
-		
-	//	intweets = intweetRepo.findAllByEmployeeIdOrderByIntweetDateDesc(followingEmpIdList);		
+		logger.info(" Before  findByEmployeeIdInOrderByIntweetTimeDesc  ");
+		intweets = intweetRepo.findByEmployeeIdInOrderByIntweetTimeDesc(followingEmpIdList);		
+		logger.info(" After  findByEmployeeIdInOrderByIntweetTimeDesc  ");
 		//End: Get Intweets posted by Logged in user's Followings
 		
 		// Start: Prepare getFeed Response
 		/*
+		int i = 0;
 		for(Intweet intweet : intweets)
 		{
 			String userName = empRepo.findById(intweet.getEmployeeId()).get().getIntweeterName();
-			feedResponse.set(index, element)
+			feedResponse.)
 			
 		}
+		*/
 		// End: Prepare getFeed Response
-		//return feedResponse;
-		 */
-		return intweets;
+		
+		return feedResponse;
 	}
 
 }

@@ -8,5 +8,5 @@ import com.example.Intwitter.entity.Intweet;
 
 public interface IntweetRepository extends JpaRepository<Intweet, Long> 
 {	
-	//public List<Intweet> findAllByEmployeeIdOrderByIntweetDateDesc(List<Long> employeeId);
+	public List<Intweet> findByEmployeeIdInOrderByIntweetTimeDesc(List<Long> employeeId);
 }
