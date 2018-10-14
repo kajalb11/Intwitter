@@ -39,7 +39,7 @@ public class FeedServiceImpl implements FeedService
 		logger.info(" Logged In Intweeter Name : {} "+currentIntweeterName);
 		List<Intweet> intweets = new ArrayList<>();
 
-		List<FeedResponse> feedResponse = new ArrayList<>();
+		List<FeedResponse> feedResponseList = new ArrayList<>();
 		Long loggedInUserEmployeeId = empRepo.findByIntweeterName(currentIntweeterName).getEmployeeId();
 		logger.info(" Logged In Intweeter Emp Id : {} "+loggedInUserEmployeeId);
 	
@@ -63,18 +63,19 @@ public class FeedServiceImpl implements FeedService
 		//End: Get Intweets posted by Logged in user's Followings
 		
 		// Start: Prepare getFeed Response
-		/*
-		int i = 0;
+		FeedResponse feedResponse = new FeedResponse();
 		for(Intweet intweet : intweets)
 		{
+					
 			String userName = empRepo.findById(intweet.getEmployeeId()).get().getIntweeterName();
-			feedResponse.)
-			
-		}
-		*/
+			feedResponse.setIntweeterName(userName);
+			feedResponse.setIntweetMessage(intweet.getIntweetMessage());
+			feedResponse.setIntweetTime(intweet.getIntweetTime());
+			feedResponseList.add(feedResponse);
+		}		
 		// End: Prepare getFeed Response
 		
-		return feedResponse;
+		return feedResponseList;
 	}
 
 }
