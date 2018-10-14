@@ -27,7 +27,7 @@ public class FeedController
 	
 	@GetMapping(value="/feed/{currentIntweeterName}", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> getFeed(@PathVariable String currentIntweeterName,@RequestParam(value = "page", defaultValue = "0") int page,
-            @RequestParam(value = "limit", defaultValue = "30") int limit)
+            @RequestParam(value = "limit", defaultValue = "5") int limit)
 	{
 		logger.info("Inside FeedController : getFeed for user {}", currentIntweeterName);
 		return new ResponseEntity<>(feedService.getFeed(currentIntweeterName , page,limit),HttpStatus.OK);	
