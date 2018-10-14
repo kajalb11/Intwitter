@@ -63,11 +63,10 @@ public class FeedServiceImpl implements FeedService
 		//End: Get Intweets posted by Logged in user's Followings
 		
 		// Start: Prepare getFeed Response
-		FeedResponse feedResponse = new FeedResponse();
 		for(Intweet intweet : intweets)
-		{
-					
+		{	
 			String userName = empRepo.findById(intweet.getEmployeeId()).get().getIntweeterName();
+			FeedResponse feedResponse = new FeedResponse();
 			feedResponse.setIntweeterName(userName);
 			feedResponse.setIntweetMessage(intweet.getIntweetMessage());
 			feedResponse.setIntweetTime(intweet.getIntweetTime());
