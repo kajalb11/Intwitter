@@ -19,10 +19,11 @@ import lombok.Setter;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Employee implements Serializable
 {	
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -8787146733213815350L;
+	private static final long serialVersionUID = -6293586406178642394L;
 
 	@Id
 	@Column(name="employee_id",unique=true,nullable=false)

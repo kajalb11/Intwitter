@@ -33,8 +33,8 @@ Logger logger = LoggerFactory.getLogger(FollowingController.class);
 	public ResponseEntity<?> postIntweet(@RequestBody IntweetRequest intweetRequest) 
 	{
 		logger.info("inside post intweet ");
-		if(intweetRequest.getIntweetMessage().length() >280) {
-			return new ResponseEntity<>("Max message size is 280",HttpStatus.BAD_REQUEST);
+		if(intweetRequest.getIntweetMessage().length() >20) {
+			return new ResponseEntity<>("Max intweet size is 280.",HttpStatus.BAD_REQUEST);
 		}
 		intweetService.postIntweet(intweetRequest);
 		return new ResponseEntity<>(HttpStatus.CREATED);
