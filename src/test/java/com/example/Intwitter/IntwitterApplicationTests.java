@@ -1,4 +1,4 @@
-package com.example.Intweet;
+package com.example.Intwitter;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
