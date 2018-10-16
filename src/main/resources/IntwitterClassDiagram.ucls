@@ -1,289 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.2" icons="true" automaticImage="JPEG" always-add-relationships="true" generalizations="true" 
-  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="com.example.Intwitter.service.impl.EmployeeServiceImpl" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/service/impl/EmployeeServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="563" y="686"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="-1" width="-1" x="599" y="265"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
   <interface id="2" language="java" name="com.example.Intwitter.service.EmployeeService" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/service/EmployeeService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="561" y="835"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="-1" width="-1" x="345" y="266"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="3" language="java" name="com.example.Intwitter.repository.EmployeeRepository" project="Intwitter" 
-    file="/Intwitter/src/main/java/com/example/Intwitter/repository/EmployeeRepository.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="567" y="535"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="4" language="java" name="com.example.Intwitter.rest.EmployeeController" project="Intwitter" 
+  <class id="3" language="java" name="com.example.Intwitter.rest.EmployeeController" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/rest/EmployeeController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="137" width="253" x="430" y="928"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="-1" width="-1" x="104" y="262"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="com.example.Intwitter.service.impl.FollowingServiceImpl" project="Intwitter" 
-    file="/Intwitter/src/main/java/com/example/Intwitter/service/impl/FollowingServiceImpl.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="155" y="532"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="6" language="java" name="com.example.Intwitter.service.FollowingService" project="Intwitter" 
+  <interface id="4" language="java" name="com.example.Intwitter.service.FollowingService" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/service/FollowingService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="157" y="335"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="-1" width="-1" x="348" y="98"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="7" language="java" name="com.example.Intwitter.rest.FollowingController" project="Intwitter" 
+  <class id="5" language="java" name="com.example.Intwitter.rest.FollowingController" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/rest/FollowingController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="212" width="279" x="14" y="14"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="-1" width="-1" x="101" y="97"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="com.example.Intwitter.service.impl.IntweetServiceImpl" project="Intwitter" 
+  <class id="6" language="java" name="com.example.Intwitter.service.impl.IntweetServiceImpl" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/service/impl/IntweetServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="912" y="537"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="82" width="216" x="492" y="367"/>    
+    <display autosize="false" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="com.example.Intwitter.rest.IntweetController" project="Intwitter" 
+  <class id="7" language="java" name="com.example.Intwitter.rest.IntweetController" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/rest/IntweetController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="137" width="237" x="1181" y="331"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="100" width="161" x="24" y="361"/>    
+    <display autosize="false" stereotype="true" package="false" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="10" language="java" name="com.example.Intwitter.service.IntweetService" project="Intwitter" 
+  <interface id="8" language="java" name="com.example.Intwitter.service.IntweetService" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/service/IntweetService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="100" width="212" x="1190" y="520"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="77" width="205" x="241" y="370"/>    
+    <display autosize="false" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="11" language="java" name="com.example.Intwitter.repository.FollowingRepository" project="Intwitter" 
-    file="/Intwitter/src/main/java/com/example/Intwitter/repository/FollowingRepository.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="101" width="163" x="356" y="354"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <interface id="12" language="java" name="com.example.Intwitter.repository.IntweetRepository" project="Intwitter" 
-    file="/Intwitter/src/main/java/com/example/Intwitter/repository/IntweetRepository.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="83" width="344" x="740" y="327"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="13" language="java" name="com.example.Intwitter.rest.FeedController" project="Intwitter" 
+  <class id="9" language="java" name="com.example.Intwitter.rest.FeedController" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/rest/FeedController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="932" y="87"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="82" width="158" x="24" y="555"/>    
+    <display autosize="false" stereotype="true" package="false" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="14" language="java" name="com.example.Intwitter.service.FeedService" project="Intwitter" 
+  <interface id="10" language="java" name="com.example.Intwitter.service.FeedService" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/service/FeedService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="83" width="200" x="488" y="43"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="64" width="206" x="241" y="562"/>    
+    <display autosize="false" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="15" language="java" name="com.example.Intwitter.service.impl.FeedServiceImpl" project="Intwitter" 
+  <class id="11" language="java" name="com.example.Intwitter.service.impl.FeedServiceImpl" project="Intwitter" 
     file="/Intwitter/src/main/java/com/example/Intwitter/service/impl/FeedServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="587" y="228"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+    <position height="82" width="213" x="499" y="549"/>    
+    <display autosize="false" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="16">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="17" name="intweetRepo"/>      
-      <multiplicity id="18" minimum="0" maximum="1"/>    
+  <class id="12" language="java" name="com.example.Intwitter.service.impl.FollowingServiceImpl" project="Intwitter" 
+    file="/Intwitter/src/main/java/com/example/Intwitter/service/impl/FollowingServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="603" y="94"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="com.example.Intwitter.entity.Following" project="Intwitter" 
+    file="/Intwitter/src/main/java/com/example/Intwitter/entity/Following.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="89" width="176" x="1063" y="47"/>    
+    <display autosize="false" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="true" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="com.example.Intwitter.entity.Employee" project="Intwitter" 
+    file="/Intwitter/src/main/java/com/example/Intwitter/entity/Employee.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1139" y="260"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="true" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="com.example.Intwitter.entity.Intweet" project="Intwitter" 
+    file="/Intwitter/src/main/java/com/example/Intwitter/entity/Intweet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1148" y="493"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="16" language="java" name="com.example.Intwitter.repository.FollowingRepository" project="Intwitter" 
+    file="/Intwitter/src/main/java/com/example/Intwitter/repository/FollowingRepository.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="82" width="215" x="767" y="50"/>    
+    <display autosize="false" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="17" language="java" name="com.example.Intwitter.repository.EmployeeRepository" project="Intwitter" 
+    file="/Intwitter/src/main/java/com/example/Intwitter/repository/EmployeeRepository.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="64" width="201" x="768" y="231"/>    
+    <display autosize="false" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="18" language="java" name="com.example.Intwitter.repository.IntweetRepository" project="Intwitter" 
+    file="/Intwitter/src/main/java/com/example/Intwitter/repository/IntweetRepository.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="64" width="288" x="754" y="463"/>    
+    <display autosize="false" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <association id="19">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="20" name="intweetService">        
+        <position height="0" width="0" x="-953" y="-168"/>      
+      </attribute>      
+      <multiplicity id="21" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-953" y="-168"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <realization id="19">    
-    <end type="SOURCE" refId="15"/>    
+  <dependency id="22">    
+    <end type="SOURCE" refId="17"/>    
     <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="20">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="21" name="empRepo"/>      
-      <multiplicity id="22" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  </dependency>  
   <association id="23">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="24" name="empService"/>      
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="24" name="empRepo"/>      
       <multiplicity id="25" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <association id="26">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="27" name="empRepo"/>      
-      <multiplicity id="28" minimum="0" maximum="1"/>    
+  <realization id="26">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="27">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="28" name="followingRepo"/>      
+      <multiplicity id="29" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <association id="29">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="30" name="followingRepo"/>      
-      <multiplicity id="31" minimum="0" maximum="1"/>    
+  <association id="30">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="31" name="empRepo"/>      
+      <multiplicity id="32" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <association id="32">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="33" name="empRepo"/>      
-      <multiplicity id="34" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <dependency id="33">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <realization id="34">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
   <association id="35">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="36" name="empRepo"/>      
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="36" name="followingRepo"/>      
       <multiplicity id="37" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
   <association id="38">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="39" name="feedService"/>      
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="39" name="intweetRepo"/>      
       <multiplicity id="40" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
   <association id="41">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="42" name="followingService"/>      
-      <multiplicity id="43" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="42" name="empService">        
+        <position height="0" width="0" x="-216" y="-569"/>      
+      </attribute>      
+      <multiplicity id="43" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-216" y="-569"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
   <association id="44">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="45" name="followingRepo"/>      
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="45" name="intweetRepo"/>      
       <multiplicity id="46" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <association id="47">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="48" name="intweetRepo"/>      
-      <multiplicity id="49" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="50">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="6"/>  
+  <dependency id="47">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <realization id="48">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="4"/>  
   </realization>  
-  <association id="51">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="52" name="followingRepo"/>      
-      <multiplicity id="53" minimum="0" maximum="1"/>    
+  <association id="49">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="50" name="feedService">        
+        <position height="0" width="0" x="-218" y="510"/>      
+      </attribute>      
+      <multiplicity id="51" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-218" y="510"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <realization id="54">    
+  <association id="52">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="53" name="followingService">        
+        <position height="0" width="0" x="191" y="-237"/>      
+      </attribute>      
+      <multiplicity id="54" minimum="0" maximum="1">        
+        <position height="0" width="0" x="191" y="-237"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <realization id="55">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="2"/>  
   </realization>  
-  <association id="55">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="56" name="intweetRepo"/>      
-      <multiplicity id="57" minimum="0" maximum="1"/>    
+  <association id="56">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="57" name="empRepo"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
-  <association id="58">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="59" name="intweetService"/>      
-      <multiplicity id="60" minimum="0" maximum="1"/>    
+  <association id="59">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="60" name="empRepo"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="61">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="10"/>  
-  </realization>  
-  <association id="62">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="63" name="intweetRepo"/>      
-      <multiplicity id="64" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
